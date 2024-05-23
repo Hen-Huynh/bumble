@@ -19,6 +19,12 @@
       cursor: pointer;
     }
 
+    #text {
+      display: none;
+      text-align: center;
+      font-size: 24px;
+    }
+
     @keyframes beat {
       0% { transform: scale(1); }
       100% { transform: scale(1.2); }
@@ -26,16 +32,19 @@
   </style>
 </head>
 <body>
-  <div id="poop" onclick="showText()">💩</div>
-  <div id="text" style="display: none;">Cuc Cut Cho</div>
+  <div id="poop" onclick="toggleText()">💩</div>
+  <div id="text">Cuc Cut Cho</div>
+  <div id="click-me" style="text-align: center;">Click Me</div>
 
   <script>
-    function showText() {
+    function toggleText() {
       var textDiv = document.getElementById("text");
       if (textDiv.style.display === "none") {
         textDiv.style.display = "block";
+        document.getElementById("click-me").style.display = "none";
       } else {
         textDiv.style.display = "none";
+        document.getElementById("click-me").style.display = "block";
       }
     }
   </script>
