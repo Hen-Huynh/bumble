@@ -54,24 +54,8 @@ body {
     }
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    margin-top: 20px;
-    cursor: pointer;
-    background-color: #ff69b4;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #ff85c1;
-}
-
 #message {
     margin-top: 20px;
     font-size: 24px;
     color: #ff69b4;
-    display: none;
 }
