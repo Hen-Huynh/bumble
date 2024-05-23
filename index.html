@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beating Poop Emoji</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #poop {
+      font-size: 100px;
+      animation: beat 1s infinite alternate;
+      cursor: pointer;
+    }
+
+    @keyframes beat {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.2); }
+    }
+  </style>
 </head>
 <body>
-    <div class="heart-container">
-        <div class="heart"></div>
-    </div>
-    <h1 id="message">cuc cut cho</h1>
+  <div id="poop" onclick="showText()">💩</div>
+  <div id="text" style="display: none;">Cuc Cut Cho</div>
+
+  <script>
+    function showText() {
+      var textDiv = document.getElementById("text");
+      if (textDiv.style.display === "none") {
+        textDiv.style.display = "block";
+      } else {
+        textDiv.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>
